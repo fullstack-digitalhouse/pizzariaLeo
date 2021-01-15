@@ -1,11 +1,38 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= title %></title>
+    <title>Página Inicial</title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
+    <header>
+      <div class="conteudo">
+        <div class="logo">
+          <a href="#">
+            <img src="/images/logo.png" alt="logo">
+          </a>
+          <h1>HausOfPizza</h1>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="#">cardápio</a></li>
+            <li><a href="#">contato</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <div class="conteudo">
+        <h2>Conheça nossas pizzas:</h2>
+        <ul>
+          <% for(pizza of pizzas){ %>
+            <li><%= pizza.nome %></li>
+          <% } %>
+        </ul>
+      </div>
+    </main>
+    <footer>
+      <p>Leonardo Rodrigues - 2021</p>
+    </footer>
   </body>
 </html>

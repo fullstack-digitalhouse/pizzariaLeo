@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Página Pizzas</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1>Página Pizzas</h1>
+    <p>Bem vindo à página Pizzas</p>
+    <ul>
+      <% for(let pizza of pizzas) { %>
+        <li><%= pizza.nome %></li>
+      <% } %>
+    </ul>    
+  </body>
+</html>
