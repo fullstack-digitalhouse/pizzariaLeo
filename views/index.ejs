@@ -22,13 +22,23 @@
       </div>
     </header>
     <main>
-      <div class="conteudo">
-        <h2>Conheça nossas pizzas:</h2>
-        <ul>
-          <% for(pizza of pizzas){ %>
-            <li><%= pizza.nome %></li>
-          <% } %>
-        </ul>
+      <div class="background">          
+      </div>
+
+      <div class="conteudo">     
+        <form action="#">
+          <input type="text" name="buscaPizza" id="buscaPizza" placeholder="Qual sabor você procura?">
+          <a href="#">Buscar</a>
+        </form>
+
+        <div class="cards">
+          <% for(let pizza of pizzas){ %>
+            <div class="card" style="background: url('<%= pizza.img %>') no-repeat center; background-size: cover;">
+              <p class="nome"><%= pizza.nome %></p>
+              <p class="preco">R$ <%= pizza.preco %></p>
+            </div>
+          <% } %>         
+        </div>
       </div>
     </main>
     <footer>
